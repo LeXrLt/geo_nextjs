@@ -6,6 +6,7 @@
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start -p ${PORT:-3000}",
+    "migrate": "node scripts/migrate.js",
     "lint": "echo 'no lint configured'"
   },
   "dependencies": {
