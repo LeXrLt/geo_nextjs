@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     setAuthCookie(res, token)
 
     const { hashed_password, ...safeUser } = user
-    res.status(200).json({ ok: true, user: safeUser })
+    res.status(200).json({ ok: true, user: safeUser, token })
   } catch (err) {
     res.status(500).json({ ok: false, error: err.message })
   }
