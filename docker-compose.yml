@@ -30,6 +30,10 @@ services:
       TZ: Asia/Shanghai
     ports:
       - "3000:3000"
+    volumes:
+      - .env:/app/.env
+      - ./migrations:/app/migrations
+      - ./scripts:/app/scripts
 
 volumes:
   db_data:
