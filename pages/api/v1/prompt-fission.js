@@ -51,7 +51,7 @@ export default async function handler(req, res) {
 
     // 1) create task (processing)
     const taskResult = await pool.query(
-      `INSERT INTO tasks (user_id, original_prompt, status) VALUES ($1, $2, 'processing') RETURNING id`,
+      `INSERT INTO tasks (user_id, original_prompt, status, expires_at) VALUES ($1, $2, 'processing', NOW() + INTERVAL '24 hours') RETURNING id`,
       [userId, prompt]
     )
     const taskId = taskResult.rows[0].id

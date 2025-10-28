@@ -10,7 +10,7 @@ RUN npm install --legacy-peer-deps
 
 # ---- Build ----
 FROM base AS build
-ENV NODE_ENV=development
+ENV NODE_ENV=production
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .

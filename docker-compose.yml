@@ -6,6 +6,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: appdb
+      TZ: Asia/Shanghai
     ports:
       - "5432:5432"
     volumes:
@@ -26,6 +27,7 @@ services:
       PORT: 3000
       NEXT_TELEMETRY_DISABLED: 1
       NODE_ENV: production
+      TZ: Asia/Shanghai
     ports:
       - "3000:3000"
 
