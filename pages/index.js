@@ -3,12 +3,13 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main style={{padding: 24, fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif'}}>
-      <h1>Next.js + PostgreSQL Template</h1>
-      <p>前后端一体的模板：Next.js 前端页面 + API 路由 + PostgreSQL 连接。</p>
+      <h1>用户系统示例</h1>
+      <p>包含登录、注册与个人主页的基础流程。</p>
       <ul>
-        <li><Link href="/api/db-test">测试数据库接口 /api/db-test</Link></li>
+        <li><Link href="/login">登录</Link></li>
+        <li><Link href="/register">注册</Link></li>
+        <li><Link href="/profile">个人主页</Link></li>
       </ul>
-      <p>在 docker-compose 中会自动启动 PostgreSQL 和本应用。</p>
     </main>
   )
 }
